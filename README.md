@@ -1,6 +1,12 @@
 # virtualb0x_infra
 virtualb0x Infra repository
 
+```
+testapp_IP = 51.250.5.135
+testapp_port = 9292
+```
+ 
+
 # Выполнено ДЗ № 3
 
  - [X] Основное ДЗ
@@ -179,10 +185,5 @@ yc-user@reddit-app:~$
 
  ## Как проверить работоспособность:
 
-```
-testapp_IP = 51.250.5.135
-testapp_port = 9292
-```
- 
  http://51.250.5.135:9292/
 

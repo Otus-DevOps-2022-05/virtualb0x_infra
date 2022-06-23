@@ -182,6 +182,6 @@ yc-user@reddit-app:~$
 http://51.250.5.135:9292/
 
 
- testapp_IP=51.250.5.135
+ testapp_IP = 51.250.5.135
 
- testapp_port=9292
+ testapp_port = 9292

@@ -1,6 +1,12 @@
 # virtualb0x_infra
 virtualb0x Infra repository
 
+```
+testapp_IP = 51.250.5.135
+testapp_port = 9292
+```
+ 
+
 # Выполнено ДЗ № 3
 
  - [X] Основное ДЗ
@@ -31,7 +37,7 @@ ssh -i ~/.ssh/appuser -J appuser@51.250.85.222 appuser@10.128.0.12
 
 или
 
-ssh -i ~/.ssh/appuser -J appuser@$bastion_IP appuser@$someinternalhost_IP 
+ssh -i ~/.ssh/appuser -J appuser@$bastion_IP appuser@$someinternalhost_IP
 
     где 51.250.85.222 - внешний ip адрес машины bastion;
 
@@ -114,5 +120,70 @@ Last login: Fri Jun 17 11:48:04 2022 from 10.128.0.12
  Возвращаемся в браузер. Проверяем.
 
 ## PR checklist
- - [ ] Выставил label с номером домашнего задания
- - [ ] Выставил label с темой домашнего задания
+ - [x] Выставил label с номером домашнего задания
+ - [x] Выставил label с темой домашнего задания
+
+
+
+ # Выполнено ДЗ № 4
+
+  - [X] Основное ДЗ
+  - [X] Задание со *
+
+ ## В процессе сделано:
+ - Всё ещё подгорает от того, что пихаются репы монги, до которой нет доступа
+
+ - Установлен YC CLI
+ ```
+ [loa@loa-work ~]$ which yc
+/home/loa/yandex-cloud/bin/yc
+ ```
+ - Проверен YC CLI
+```
+[loa@loa-work ~]$ yc config profile list
+test ACTIVE
+[loa@loa-work ~]$  yc config list
+token: *********-rvKJT4IbqqQ
+cloud-id: b1gcaif0v100d3f51n13
+folder-id: b1g1kvm2lpcc289v9i5k
+compute-default-zone: ru-central1-a
+```
+
+- Создан инстанс
+
+```
+[loa@loa-work ~]$ yc compute instance list
++----------------------+------------+---------------+---------+--------------+-------------+
+|          ID          |    NAME    |    ZONE ID    | STATUS  | EXTERNAL IP  | INTERNAL IP |
++----------------------+------------+---------------+---------+--------------+-------------+
+| fhmfma9i7qt19bg1othu | reddit-app | ru-central1-a | RUNNING | 51.250.64.52 | 10.128.0.29 |
++----------------------+------------+---------------+---------+--------------+-------------+
+```
+- Установлен Ruby и Bundler
+```
+yc-user@reddit-app:~$ ruby -v
+ruby 2.3.1p112 (2016-04-26) [x86_64-linux-gnu]
+yc-user@reddit-app:~$ bundler -v
+Bundler version 1.11.2
+```
+- Установлена и проверена монга
+```
+c-user@reddit-app:~$ systemctl status mongodb
+● mongodb.service - An object/document-oriented database
+Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+Active: active (running) since Wed 2022-06-22 18:13:26 UTC; 32min ago
+Docs: man:mongod(1)
+Main PID: 2965 (mongod)
+CGroup: /system.slice/mongodb.service
+└─2965 /usr/bin/mongod --config /etc/mongodb.conf
+yc-user@reddit-app:~$
+```
+- Задеплоено приложение
+
+ ## Как запустить проект:
+  - Никак :)
+
+ ## Как проверить работоспособность:
+
+ http://51.250.5.135:9292/
+

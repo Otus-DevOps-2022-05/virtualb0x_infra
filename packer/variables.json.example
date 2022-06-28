@@ -1,6 +1,6 @@
 {
-  "service_account_key_file": "./key.json.example",
-  "folder_id": "xxxxxxxxxxxxxxxxxxxx",
+  "service_account_key_file": "key.json.example",
+  "id_folder": "xxxxxxxxxxxxxxxxxxxx",
   "source_image_family": "ubuntu-1604-lts",
   "zone": "ru-central1-a",
   "subnet_id": "xxxxxxxxxxxxxxxxxxxx",

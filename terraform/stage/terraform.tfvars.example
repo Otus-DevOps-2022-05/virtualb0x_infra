@@ -9,4 +9,4 @@ private_key_path         = "~/.ssh/ubuntu"
 instance_count           = 2
 app_disk_image           = ""
 db_disk_image            = ""
-bucket_name = "test"
+bucket_name              = "test"

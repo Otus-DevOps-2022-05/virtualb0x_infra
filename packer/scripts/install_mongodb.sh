@@ -6,8 +6,9 @@
 
 ### Install mongodb from yandex repo
 #
+sleep 60
 sudo apt install -y mongodb
-
+sleep 60
 ### Start mongodb.service and make it run on restart
 #
 sudo systemctl start mongodb

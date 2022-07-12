@@ -1,9 +1,6 @@
 {
-  "service_account_key_file": "key.json.example",
-  "id_folder": "xxxxxxxxxxxxxxxxxxxx",
-  "source_image_family": "ubuntu-1604-lts",
-  "zone": "ru-central1-a",
-  "subnet_id": "xxxxxxxxxxxxxxxxxxxx",
-
-  "image_preemptible": "true"
+  "id_folder": "xxxxxxx",
+  "image": "ubuntu-1604-lts",
+  "key_file": "packer/key.json",
+  "ssh_user": "ubuntu"
 }

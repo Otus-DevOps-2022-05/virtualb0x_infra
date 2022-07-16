@@ -1,10 +1,6 @@
-{  "variables": {
-        "service_account_key_file": "key.json",
-        "folder_id": "b1g1kvm2lpcc289v9i5k",
-        "source_image_family": "ubuntu-1604-lts",
-        "source_image_name": "reddit-base-1656353814",
-        "zone": "ru-central1-a",
-        "subnet_id": "enp6t230gdf4iaodq9hr",
-        "image_preemptible": "true"
-      }
+{
+  "id_folder": "qwerty123",
+  "image": "ubuntu-1604-lts",
+  "key_file": "packer/key.json",
+  "ssh_user": "ubuntu"
 }

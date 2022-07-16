@@ -2,7 +2,6 @@
   hosts: app
   tags: app-tag
   become: true
-  vars:
-   db_host: 192.168.10.28
   roles:
     - app
+    - jdauphant.nginx
